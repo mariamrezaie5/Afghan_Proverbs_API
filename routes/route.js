@@ -26,6 +26,14 @@ router.get('/', (req, res) => {
   res.json(proverbs);
 });
 
+//Bonus Features:
+// GET random proverb
+router.get('/random', (req, res) => {
+    const proverbs = loadProverbs();
+    const random = proverbs[Math.floor(Math.random() * proverbs.length)];
+    res.json(random);
+});
+
 // GET a single proverb by ID
 router.get('/:id', (req, res) => {
   const proverbs = loadProverbs();
