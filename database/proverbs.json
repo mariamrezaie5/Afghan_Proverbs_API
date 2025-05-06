@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "dari": "دنیا با امید زنده است.",
+    "pashto": "نړۍ د امید سره ژوندۍ ده.",
+    "english": "The world is alive with hope.",
+    "meaning": "با امید و توکل به خدا میتوانی موفق شوی.",
+    "category": "wisdom "
+  },
+  {
+    "id": 2,
+    "dari": "صبر گل می‌دهد.",
+    "pashto": "صبر ګلاب ورکوي.",
+    "english": "Patience gives flowers.",
+    "meaning": "با صبر و شکیبایی در کارها به نتایج بهتری دست پیدا میکنی.",
+    "category": "wisdom "
+  },
+  {
+    "id": 3,
+    "dari": "گوش دادن بهتر از سخن گفتن است. .",
+    "pashto": "غږ کول د غوږ نیولو نه ډیر ښه نه دی.",
+    "english": "Listening is better than speaking.",
+    "meaning": "با گوش دادن چیزهای بهتری می آموزی.",
+    "category": "Wisdom"
+  },
+  {
+    "id": 4,
+    "dari": "آسمان همیشه صاف نیست.",
+    "pashto": "آسمان همیشه صاف نه وي.",
+    "english": "The sky is not always clear.",
+    "meaning": "همیشه همه چی به وفق آدمیزاد اتفاق نمیفتد.",
+    "category": "Realism"
+  },
+  {
+    "id": 5,
+    "dari": "شب در میان است خدا مهربان است.",
+    "pashto": "نړۍ د امید سره ژوندۍ ده.",
+    "english": "The world is alive with hope.",
+    "meaning": "در انجام کارها عجله نداشته باش.",
+    "category": "advice "
+  },
+  {
+    "id": 6,
+    "dari": "صبر گل می‌دهد.",
+    "pashto": "صبر ګلاب ورکوي.",
+    "english": "Patience gives flowers.",
+    "meaning": "با صبر و شکیبایی در کارها به نتایج بهتری دست پیدا میکنی.",
+    "category": "wisdom "
+  }
+]
