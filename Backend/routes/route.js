@@ -42,6 +42,24 @@ router.get('/:id', (req, res) => {
   if (!proverb) return res.status(404).json({ error: 'Proverb Not found' });
   res.json(proverb);
 });
+// Filter Proverbs by category
+router.get('/', (req, res) => {
+  const { category } = req.query;
+  const proverbs = loadProverbs();
+  if (category) {
+    const filteredProverbs = proverbs.filter(proverb =>
+      proverb.category.toLowerCase() === category.toLowerCase()
+    );
+
+    if (filteredProverbs.length === 0) {
+      return res.status(404).json({ error: 'No proverbs found' });
+    }
+
+    return res.json(filteredProverbs);
+  }
+
+  res.json(proverbs);
+});
 
 // Adding a new proverb
 router.post('/', (req, res) => {
