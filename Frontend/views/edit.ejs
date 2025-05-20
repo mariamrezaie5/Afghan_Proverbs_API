@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Proverb</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <%- include ('partials/header') %>
+  <%- include ('partials/navbar') %>
+  <div class="content-box">
+    <h1 style="text-align: center;">Edit Proverb</h1><hr>
+
+    <% if (error) { %>
+        <p style="color:red"><%= error %></p>
+    <% } %>
+
+    <form action="/edit/<%= proverb.id %>" method="post" >
+        <label>Dari Text:<br/>
+            <input type="text" name="dari" value="<%= proverb.dari %>" required />
+        </label><br/>
+
+        <label> Pashto Text:<br/>
+            <input type="text" name="pashto" value="<%= proverb.pashto %>" required />
+        </label><br/>
+
+        <label> English Translation:<br/>
+            <input type="text" name="english" value="<%= proverb.english %>" required />
+        </label><br/>
+
+        <label>Meaning:<br/>
+            <textarea name="meaning" required><%= proverb.meaning %></textarea>
+        </label><br/>
+
+        <label>Category:<br/>
+            <input type="text" name="category" value="<%= proverb.category %>" required />
+        </label><br/>
+  </div>
+  <div class="button-container">
+    <button type="submit" class="button" >Save</button>
+        
+    </form>
+    <a href="/show/<%= proverb.id %>"  class="button">Back</a>
+  </div>
+    
+</body>
+</html>

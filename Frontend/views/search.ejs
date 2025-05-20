@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Proverbs</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+    <%- include ('partials/header') %>
+    <%- include ('partials/navbar') %>
+  <div class="content-box">
+    <h2 Style="text-align: center;"> Search Proverbs By ID</h2>
+  
+    <form action="/search" method="POST">
+        <input type="number" name="id" placeholder=" Enter id exp: 4" required>
+        <button type="submit">Search</button>
+    </form>
+  <% if (error) { %>
+    <p style="color: red; margin-top: 10px;"><%= error %></p>
+  <% } %>
+
+  <% if (proverb) { %>
+    
+      <p><strong>ID:</strong> <%= proverb.id %></p>
+      <p><strong>Dari Text:</strong> <%= proverb.dari %></p>
+      <p><strong>Pashto Text:</strong> <%= proverb.pashto %></p>
+      <p><strong>English Translation:</strong> <%= proverb.eglish %></p>
+      <p><strong>meaning :</strong> <%= proverb.meaning %></p>
+      <p><strong>Category:</strong> <%= proverb.category %></p>
+    </div>
+  <% } %>
+
+</body>
+</html>
+

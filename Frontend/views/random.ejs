@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Random Proverb</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <%- include('partials/navbar') %>
+
+  <div class="content-box">
+    <h2 style="text-align: center;"> random Proverb</h2><hr>
+
+    <% if (error) { %>
+      <p style="color:red"><%= error %></p>
+    <% } else if (proverb) { %>
+      <p><strong>ID:</strong> <%= proverb.id %></p>
+      <p><strong>Dari Text:</strong> <%= proverb.dari %></p>
+      <p><strong>Pashto Text:</strong> <%= proverb.pashto %></p>
+      <p><strong>English Translation:</strong> <%= proverb.english %></p>
+      <p><strong>Meaning:</strong> <%= proverb.meaning %></p>
+      <p><strong>Category:</strong> <%= proverb.category %></p>
+    <% } %>
+
+    <a href="/random" class="button"> Try again</a>
+  </div>
+</body>
+</html>

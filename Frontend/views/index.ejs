@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Afghan Proverbs</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <%- include ('partials/header') %>
+  <%- include ('partials/navbar') %>
+
+  <div class="content-box">
+    <h1 style="text-align: center;">Lis of Proverbs </h1> <hr>
+
+  <% if (error) { %>
+    <p style="color:red"><%= error %></p>
+  <% } %>
+  <ul>
+    <% proverbs.forEach(proverb => { %>
+      <li>
+        <strong><%= proverb.dari %></strong> |
+        <%= proverb.pashto %> |
+        <%= proverb.english %> |
+        <em><%= proverb.category %></em><br><br>
+        <a href="/show/<%= proverb.id %>">Details</a>
+      </li>
+    <% }) %>
+  </ul>
+  </div>
+  
+  <div class="button-container">
+    <a href="/form" class="button">Add New Proverb</a>
+  </div>
+</body>
+</html>

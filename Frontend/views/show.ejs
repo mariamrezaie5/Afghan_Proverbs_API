@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>Show proverb</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <%- include ('partials/header') %>
+  <%- include ('partials/navbar') %>
+  <div class="content-box">
+    <h1 style="text-align: center;">More Details about Proverbs</h1><hr>
+    <p><strong>دری:</strong> <%= proverb.dari %></p>
+    <p><strong>پشتو:</strong> <%= proverb.pashto %></p>
+    <p><strong>انگلیسی:</strong> <%= proverb.english %></p>
+    <p><strong>معنی:</strong> <%= proverb.meaning %></p>
+    <p><strong>دسته‌بندی:</strong> <%= proverb.category %></p>
+  </div>
+  
+  
+  <div class="button-container">
+    <a href="/edit/<%= proverb.id %>" class="button">Edit</a>
+
+    <form action="/delete/<%= proverb.id %>" method="post" onsubmit="return confirm(' Are you sure?');">
+        <button type="submit" class="button">Delete</button>
+    </form>
+
+    <a href="/" class="button">Homepage</a>
+  </div>
+  
+</body>
+</html>
